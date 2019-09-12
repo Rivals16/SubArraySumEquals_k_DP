@@ -1,3 +1,4 @@
+from time import time
 def medfind(ar,left,right,median):
     if(len(ar)<right):
         if(len(ar)!=left):
@@ -13,7 +14,9 @@ def medfind(ar,left,right,median):
         medfind(ar,right,right+5,median)
     
 ar = [25,21,98,100,76,22,43,60,89,87,83,84]
+k = int(input())
 median = []
+startt = time()
 medfind(ar,0,5,median)
 median.sort()
 pivot = median[len(median)//2]
@@ -32,7 +35,6 @@ for i in ar:
         start+=1
 print(*median)
 index = median.index(pivot)
-k = int(input())
 if(k <=len(ar) ):
     if(k-1==index):
         print(median[index])
@@ -44,3 +46,9 @@ if(k <=len(ar) ):
         x = median[index+1:len(ar)]
         x.sort()
         print(x[k-index-2])
+print( time()-startt)
+startt = time()
+print(ar)
+ar.sort()
+print(ar[k-1])
+print( time()-startt)
