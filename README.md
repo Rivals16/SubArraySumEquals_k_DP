@@ -7,6 +7,7 @@
 
 4- Median Search Implementation to find k-th smallest element and Comparison with Tim Sort.
 
+5- Quick Sort Implementation.
 
 
 Installation Requirements:
